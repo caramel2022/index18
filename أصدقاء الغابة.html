@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>أصدقاء الغابة</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #6C63FF;
+            --secondary: #FF6584;
+            --accent: #FFD700;
+            --text: #2D3436;
+            --bg: #F9F7F7;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Comic Neue', cursive;
+        }
+        body {
+            background: var(--bg);
+            min-height: 100vh;
+            padding: 2rem;
+            text-align: center;
+            font-size: 1.8em; /* تكبير الخط */
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+        }
+        .story-header {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            padding: 2rem;
+        }
+        .story-title {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+        .age-group {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+        .story-image {
+            height: 300px;
+            background: url('https://via.placeholder.com/800x300?text=🐇+صورة+الأصدقاء') no-repeat center center/cover;
+        }
+        .story-content {
+            padding: 2rem;
+            line-height: 1.8;
+            color: var(--text);
+        }
+        .interactive-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        .icon-btn {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: var(--accent);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .icon-btn:hover {
+            transform: scale(1.1);
+            box-shadow: 0 4px 15px rgba(255,214,0,0.3);
+        }
+        /* تأثيرات خاصة */
+        .container::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(45deg, transparent, rgba(255,255,255,0.2), transparent);
+            transform: rotate(45deg);
+            animation: magicGlow 3s infinite linear;
+            opacity: 0.3;
+        }
+        @keyframes magicGlow {
+            0% { transform: translateX(-100%) rotate(45deg); }
+            100% { transform: translateX(100%) rotate(45deg); }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- رأس القصة -->
+        <div class="story-header">
+            <h1 class="story-title">أصدقاء الغابة 🐰🐜🐰</h1>
+            <p class="age-group">العمر: 3-5 سنوات</p>
+        </div>
+        <br>
+        <a href="https://ibb.co/h1ZwcMMz"><img src="https://i.ibb.co/VpQ5xNN4/9db23690-d15b-4e21-b826-3be1eab3d1bb.png" alt="9db23690-d15b-4e21-b826-3be1eab3d1bb" border="0"></a>
+        <p>فِي غَابَةٍ صَغِيرَةٍ هَادِئَةٍ، تَعَارَفَ ثَلَاثَةُ حَيَوَانَاتٍ صِغَارٍ عَلَى بَعْضِهِمْ بَعْضًا. كَانَ هُنَاكَ فَارِسُ، فَأْرٌ صَغِيرٌ وَوَدِيعٌ يُحِبُّ الْمُغَامَرَاتِ؛ وَنُورَا، نَمْلَةٌ مُجْتَهِدَةٌ تَعْمَلُ بِجَدٍّ طُولَ النَّهَارِ؛ وَلَيْلَى، أَرْنَبَةٌ لَطِيفَةٌ ذَاتُ عَيْنَيْنِ زَرْقَاوَيْنِ تُحِبُّ اللُّعَبَ وَالْمَرْحَ. رَغْمَ اخْتِلَافِ شَخْصِيَّاتِهِمْ وَأَسْلُوبِ حَيَاتِهِمْ، قَرَّرُوا أَنْ يُصْبِحُوا أَصْدِقَاءَ مَدَى الْحَيَاةِ.</p>
+        <p>كَانَ ذَلِكَ يَوْمًا مُشْمِسًا إِذْ التَقَى الْفَأْرُ فَارِسُ مَعَ النَّمْلَةِ نُورَا بِالْوَقْتِ الَّذِي كَانَتْ فِيهِ تَحْمِلُ حَبَّةَ ذُرَةٍ ثَقِيلَةً جِدًّا. رَآهَا فَارِسُ وَهِيَ تُكَافِحُ تَحْتَ وَزْنِ الْحَبَّةِ، فَقَرَّرَ مُسَاعَدَتَهَا. شَكَرَتْهُ نُورَا بِشِدَّةٍ وَقَالَتْ لَهُ أَنَّ التَّعَاوُنَ هُوَ أَصْلُ الْعَمَلِ الْجَيِّدِ. ثُمَّ جَاءَتْ لَيْلَى الأَرْنَبَةُ الَّتِي كَانَتْ تَقْفُزُ مِنْ شَجِيرَةٍ إِلَى أُخْرَى، وَانْضَمَّتْ إِلَيْهِمَا بَعْدَ أَنْ سَمِعَتْ ضَحِكَتَهُمَا. بَدَأَ الثَّلاَثَةُ بِالتَّحَدُّثِ عَنْ أَحْلاَمِهِمْ وَهَوَائِهِمْ، وَاخْتَرَقُوا أَنَّ لَدَيْهِمْ كَثِيرٌ مِنَ الْقِوَاسِمِ الْمُشْتَرَكَةِ.</p>
+        <p>بَعْدَ أَيَّامٍ قَلِيلَةٍ، قَرَّرَ الأَصْدِقَاءُ الثَّلاَثةُ قِيَامًا بِمُغَامَرَةٍ فِي الْغَابَةِ لِلاسْتِكْشَافِ أَمَاكِنَ جَدِيدَةً. أَثْنَاءَ السِّيرِ، اسْتَكْشَفُوا نَهْرًا صَغِيرًا كَانَ يَجِبُ عَلَيْهِمْ عُبُورُهُ لِلْوُصُولِ إِلَى الْجَانِبِ الْأُخَرَ. لَكِنَّ الْمِيَاهَ كَانَتْ عَمِيقَةً بِالنِّسْبَةِ لَهُمْ، وَلَمْ يَكُنْ لَدَيْهِمْ فِكْرَةٌ عَنْ كَيْفِيَّةِ الْعُبُورِ.</p>
+        <p>فَكَّرَ فَارِسُ مِلَاءً وَقَالَ: "لَدَيَّ خِطَّةٌ!" ذَهَبَ إِلَى مَكَانٍ قَرِيبٍ وَجَاءَ بِبَعْضِ الأَعْوَادِ الْخَشَبِيَّةِ وَالأَوْرَاقِ الْكَبِيرَةِ، وَصَنَعَ قَارِبًا صَغِيرًا. سَاعَدَتْهُ نُورَا بِاسْتِخْدَامِ خِيَوَاطِ الْحَرِيرِ الَّتِي جَمَعَتْهَا مِنَ الْعَنَاقِبِ لِتَثْبِيتِ الأَجْزَاءِ مَعًَا، وَحِينَئِذٍ قَفَزَتْ لَيْلَى دَاخِلَ الْقَارِبِ بِفَرَحٍ لِتَحْرِيكِهِ بِأَذُنَيْهَا الطَّوِيلَتَيْنِ.</p>
+        <p>نَجَحَتْ خِطَّتُهُمْ تَمَامًا! عَبَرُوا النَّهْرَ بِأَمَانٍ وَوَجَدُوا أَنْفُسَهُمْ فِي مَنْطِقَةٍ مَلِئَةٍ بِالزُّهُورِ الْبَرِّيَّةِ وَالْفَوَاكِهِ الطَّازِجَةِ. كَانُوا سُعَدَاءَ جِدًّا بِمَا أَنْجَزُوهُ مَعًا.</p>
+        <p>أَثْنَاءَ السِّيرِ، سَمِعُوا صَوْتًا غَرِيبًا يَأْتِي مِنْ بَعِيدٍ. اقْتَرَبُوا بِحَذَرٍ لِيَجِدُوا أَنَّ صَغِيرَ غُرَابٍ قَدْ سَقَطَ مِنْ عَشِّهِ وَأُصِيبَ بِجُرُوحٍ خَفِيفَةٍ. شَعَرَ الأَصْدِقَاءُ بِالشَّفَقَةِ عَلَيْهِ، فَقَرَّرُوا مُسَاعَدَتَهُ.</p>
+        <p>قَالَتْ نُورَا: "أَحْتَاجُ إِلَى أَوْرَاقٍ صَغِيرَةٍ لِنَظَافَةِ جِرَاحِهِ." فَارِسُ قَفَزَ بِسُرْعَةٍ لِجَمْعِ الأَوْرَاقِ، وَحِينَئِذٍ أَحْضَرَتْ لَيْلَى قَطْرَاتٍ مِنَ الْمَاءِ بِاسْتِخْدَامِ أَذُنَيْهَا كَكَاسَاتٍ. بَعْدَ أَنْ عَالَجُوا جِرَاحَ الْغُرَابِ الصَّغِيرِ، سَاعَدُوهُ عَلَى الرُّجُوعِ إِلَى عَشِّهِ بِعَنَايَةٍ.</p>
+        <p>شَكَرَهُمُ الْغُرَابُ الصَّغِيرُ بِشِدَّةٍ وَقَالَ: "أَنْتُمْ أَصْدِقَاءُ رَائِعُونَ. لَنْ أَنْسَى مَا فَعَلْتُمُوهُ مِنْ أَجْلِي."</p>
+        <p>مُنْذُ تِلْكَ اللَّحْظَةِ، أَصْبَحَتْ صَدَاقَةُ الأَصْدِقَاءِ الثَّلاَثَةِ أَقْوَى مِنْ أَيِّ وَقْتٍ مَضَى. كَانُوا يُوَاجِهُونَ التَّحَدِّيَاتِ مَعًا وَيَسْتَمْتَعُونَ بِكُلِّ لَحْظَةٍ فِي الْغَابَةِ. عَلَّمَتْهُمْ هَذِهِ التَّجَارِبُ أَنَّ الاِخْتِلَافَاتِ لَيْسَتْ عَائِقًا، بَلْ هِيَ مَصْدَرُ قُوَّةٍ يُمْكِنُهُمُ الِاتِّكَالُ عَلَيْهِ لِتَحْقِيقِ الْمُسْتَحِيلِ.</p>
+        <p>وَفِي كُلِّ مَرَةٍ يَلْتَقِي فِيهَا فَارِسُ، نُورَا، وَلَيْلَى، يَتَذَكَّرُونَ الأَيَّامَ الْجَمِيلَةَ الَّتِي قَضَوْهَا مَعًا، وَيَشْعُرُونَ بِالاِمْتِنَانِ لِأَنَّهُمْ وَجَدُوا بَعْضَهُمْ بَعْضًا.</p>
+        <p>"بِالْتَّعَاوُنِ وَالصَّدَاقَةِ، يُمْكِنُنَا تَحْقِيقُ كُلِّ شَيْءٍ."</p>
+        </div>
+        <!-- أزرار التفاعل -->
+        <div class="interactive-buttons">
+            <div class="icon-btn" onclick="playAudio('audio/story1.mp3')">
+                <i class="fas fa-volume-up"></i>
+            </div>
+            <div class="icon-btn" onclick="bookmarkStory()">
+                <i class="fas fa-bookmark"></i>
+            </div>
+        </div>
+        <audio id="smartRabbitAudio" src="audio/الأصدقاء_الثلاثة.mp3" preload="auto"></audio>
+        <audio id="newSmartRabbitAudio" src="audio/another_smart_rabbit.mp3" preload="auto"></audio>
+        <audio id="audio" src="audio/story1.mp3" preload="auto"></audio>
+        <audio id="anotherSmartRabbitAudio" src="audio/another_smart_rabbit.mp3" preload="auto"></audio>
+    </div>
+
+    <script>
+        // تشغيل الصوت
+        function playAudio(filename) {
+            var audio = document.getElementById('smartRabbitAudio');
+            audio.src = filename;
+            audio.play();
+        }
+
+        // إضافة القصة إلى المفضلة
+        function bookmarkStory() {
+            alert("تمت إضافة القصة إلى المفضلة!");
+        }
+
+        // تشغيل صوت الأرنب الذكي
+        function playSmartRabbitAudio() {
+            var audio = document.getElementById('smartRabbitAudio');
+            audio.play();
+        }
+    </script>
+</body>
+</html>

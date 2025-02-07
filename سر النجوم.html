@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>سر النجوم</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #6C63FF;
+            --secondary: #FF6584;
+            --accent: #FFD700;
+            --text: #2D3436;
+            --bg: #F9F7F7;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Comic Neue', cursive;
+        }
+        body {
+            background: var(--bg);
+            min-height: 100vh;
+            padding: 2rem;
+            text-align: center;
+            font-size: 1.8em; /* تكبير الخط */
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+        }
+        .story-header {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            padding: 2rem;
+        }
+        .story-title {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+        .age-group {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+        .story-image {
+            height: 300px;
+            background: url('https://via.placeholder.com/800x300?text=🐇+صورة+الأرنب') no-repeat center center/cover;
+        }
+        .story-content {
+            padding: 2rem;
+            line-height: 1.8;
+            color: var(--text);
+        }
+        .interactive-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        .icon-btn {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: var(--accent);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .icon-btn:hover {
+            transform: scale(1.1);
+            box-shadow: 0 4px 15px rgba(255,214,0,0.3);
+        }
+        /* تأثيرات خاصة */
+        .container::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(45deg, transparent, rgba(255,255,255,0.2), transparent);
+            transform: rotate(45deg);
+            animation: magicGlow 3s infinite linear;
+            opacity: 0.3;
+        }
+        @keyframes magicGlow {
+            0% { transform: translateX(-100%) rotate(45deg); }
+            100% { transform: translateX(100%) rotate(45deg); }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- رأس القصة -->
+        <div class="story-header">
+            <h1 class="story-title">سر النجوم</h1>
+            <p class="age-group">العمر: 3-5 سنوات</p>
+        </div>
+        <div class="story-content">
+            <a href="https://ibb.co/29C3qwY"><img src="https://i.ibb.co/NvJ2xXn/28774438-02d1-4cd9-ae34-d03c88e80c08.png" alt="28774438-02d1-4cd9-ae34-d03c88e80c08" border="0"></a>
+            <p>في لِـيـلَةٍ صَافِيَةٍ، كَانَتِ السَّمَاءُ تَتَوَهَّجُ بِنُجُومِهَا اللَّامِعَةِ، وَحِينَما كَانَ الطِّفْلُ الصَّغِيرُ "لُؤَي" يَجْلِسُ عَلَى الشَّرْفَةِ مَعَ جَدِّهِ، يَسْتَمْتِعَانِ بِالْهَوَاءِ الْعَلِيلِ وَصَمْتِ اللَّيْلِ. رَفَعَ لُؤَي عَيْنَيْهِ نَحْوَ السَّمَاءِ المُمْتَدَّةِ بِلا نِهَايَةٍ، ثُمَّ التَفَتَ إِلَى جَدِّهِ وَقَالَ بِحَمَاسٍ: "جَدِّي، لِمَاذَا تَتَوَهَّجُ النُّجُومُ؟ هَلْ هِيَ مِصْبَاحٌ فِي السَّمَاءِ أَمْ أَنَّ لَهَا سِرًّا آخَرَ؟"</p>
+            <p>ابْتَسَمَ الجَدُّ بِلُطْفٍ، وَنَظَرَ إِلَى السَّمَاءِ بِالضَّحِيَّةِ قَبْلَ أَنْ يُجِيبَ: "نَعَمْ يَا وَلَدِي، لِلنُّجُومِ أَسْرَارٌ كَثِيرَةٌ. إِنَّهَا لَيْسَتْ ذَاتَ مِصْبَاحٍ، بَلْ هِيَ شُمُوسٌ بَعِيدَاتٌ عَنَّا جِدًّا، وَبَعْضُهَا أَكْبَرُ مِنْ شَمْسِنَا الَّتِي نَرَاهَا كُلَّ يَوْمٍ."</p>
+            <p>"لَكِنْ لِمَاذَا تَبْدُو صَغِيرَةً بِهَذَا الشَّكْلِ إذًا؟" سَأَلَ لُؤَي بِفَضُولٍ.</p>
+            <p>رَدَّ الجَدُّ قَائِلًا: "لأَنَّهَا بَعِيدَةٌ عَنَّا كَثِيرًا، يَا حَبِيبِي. المَسَافَةُ بَيْنَ الأَرْضِ وَهَذِهِ النُّجُومِ هَائِلَةٌ، لِدَرَجَةٍ أَنَّ الضَّوْءَ الَّذِي نَرَاهُ الآنَ قَدْ بَدَأَ رِحْلَتَهُ إِلَيْنَا مُنْذُ مِلْيَارَاتِ السِّنِينَ! عَلَّ بَعْضَ هَذِهِ النُّجُومِ لَمْ تَعُدْ مَوْجُودَةً الآنَ، لَكِنْ ضَوْئَهَا لَا يَزَالُ يَصِلُ إِلَيْنَا."</p>
+            <p>فَتَحَ لُؤَي فَمَهُ فِي دَهْشَةٍ، ثُمَّ قَالَ: "وَاؤُو! هَذَا يَعْنِي أَنَّنَا حِينَمَا نَنْظُرُ إِلَى النُّجُومِ، نَحْنُ نَنْظُرُ إِلَى المَاضِي؟"</p>
+            <p>أَوْمَأَ الجَدُّ بِرَأْسِهِ مُوَافِقًا: "بَلَغَ الدِّقَّةِ يَا لُؤَي. حِينَمَا تَنْظُرُ إِلَى السَّمَاءِ، فَإِنَّكَ لَا تَرَى فَقَطِ الجَمَالَ الرَّاهِنَ، بَلْ تَرَى أَيْضًا ذِكْرَى الكَوْنِ القَدِيمَةِ."</p>
+            <p>اسْتَمَرَّ لُؤَي فِي النَّظَرِ إِلَى السَّمَاءِ، وَكَأَنَّهُ يُحَاوِلُ أَنْ يَخْتِرِقَ الغَمُوضَ الَّذِي يُحِيطُ بِتِلْكَ النُّقَاطِ المُتَلَأْلِئَةِ. بَعْدَ لَحْظَةٍ، سَأَلَ مَرَّةً أُخْرَى: "إِذَا كَانَتِ النُّجُومُ بَعِيدَةً جِدًّا، فَكَيْفَ يُمْكِنُنَا أَنْ نَعْرِفَ قِصَصَهَا أَوْ نَتَعَلَّمَ مِنْهَا؟"</p>
+            <p>ابْتَسَمَ الجَدُّ وَهُوَ يَضَعُ يَدَهُ عَلَى كَتِفِ حَفِيْدِهِ: "نَحْنُ نَتَعَلَّمُ يَا وَلَدِي مِنْ خِلَالِ العِلْمِ والْبَحْثِ. الفَضُولُ هُوَ الَّذِي يَجْعَلُنَا نَكْشِفُ العَالَمَ حَوْلَنَا. مُنْذُ زَمَنٍ طَوِيلٍ، كَانَ النَّاسُ يَنْظُرُونَ إِلَى السَّمَاءِ ويَحْلُمُونَ بِاكْتِشَافِ مَا وَرَاءَهَا. اليَوْمَ، اِسْتَطَعْنَا أَنْ نَكْتَسِبَ تِلْسِكُوبَاتٍ قَوِيَّةً تُسَاعِدُنَا عَلَى دِرَاسَةِ النُّجُومِ والْكَوَاكِبِ وَحَتَّى المَجَارِي البَعِيدَةِ."</p>
+            <p>أَضَاءَتْ عَيْنَا لُؤَي بِبَرِيقٍ جَدِيدٍ، وَقَالَ بِشَغَفٍ: "أُرِيدُ أَنْ أَصِيرَ عَالِمًا فَلَكِيًّا وأَكْشِفَ أَسْرَارَ النُّجُومِ بِنَفْسِي!"</p>
+            <p>ضَحِكَةٌ خَفِيفَةٌ خَرَجَتْ مِنْ الجَدِّ، وَقَالَ: "إِنَّهَا فِكْرَةٌ جَمِيلَةٌ يَا لُؤَي. إِذَا كُنْتَ تَحْمِلُ هَذَا الحَمَاسَ والْفَضُولَ، فَلَا شَكَّ أَنَّكَ سَتَصِلُ بَعِيدًا. تَذَكَّرْ دَائِمًا أَنَّ النُّجُومَ تُعَلِّمُنَا شَيْئًا مُهِمًّا: حَتَّى إِنْ كُنْتَ صَغِيرًا أَوْ بَعِيدًا، يُمْكِنُكَ أَنْ تَذَرَّ بَصِمَةً مُضِيئَةً فِي الحَيَاةِ."</p>
+            <p>ظَلَّ لُؤَي وَجَدُّهُ يَتَحَدَّثَانِ طِوالَ اللَّيْلِ عَنِ النُّجُومِ والمَجَارِي والسَّفَرِ إِلَى الفَضَاءِ. وَبَيْنَمَا كَانَ لُؤَي يَتَأَمَّلُ السَّمَاءَ، تَخَيَّلَ نَفْسَهُ يَوْمًا مَا يَقِفُ عَلَى سَطْحِ كَوْكَبٍ آخَرَ، يَنْظُرُ إِلَى الأَرْضِ كَنُقْطَةٍ زَرْقَاءَ صَغِيرَةً تَتَوَسَّطُ الكَوْنَ الوَاسِعَ.</p>
+            <p>وَفِي تِلْكَ اللَّيْلَةِ، اِسْتَقْبَلَ لُؤَي قَرَارًا صَغِيرًا وَلَكِنَّهُ عَمِيقًا: لَنْ يَجْعَلَ أَحَدًا يُوقِفُهُ عَنْ تَحْقِيقِ حُلْمِهِ. فَالنُّجُومُ، كَمَا عَلَّمَهُ جَدُّهُ، لَيْسَتْ فَقَطْ لِلتَّأَمُّلِ، بَلْ هِيَ مَصْدَرُ إِلْهَامٍ لِكُلِّ مَنْ يُؤْمِنُ بِأَنَّ السَّمَاءَ لَيْسَتْ حُدُودًا، بَلْ بَدَايَةً جَدِيدَةً.</p>
+        </div>
+        <!-- أزرار التفاعل -->
+        <div class="interactive-buttons">
+            <div class="icon-btn" onclick="playAudio('audio/story1.mp3')">
+                <i class="fas fa-volume-up"></i>
+            </div>
+            <div class="icon-btn" onclick="bookmarkStory()">
+                <i class="fas fa-bookmark"></i>
+            </div>
+        </div>
+        <audio id="smartRabbitAudio" src="audio/الأرنب_الذكي.mp3" preload="auto"></audio>
+        <audio id="newSmartRabbitAudio" src="audio/another_smart_rabbit.mp3" preload="auto"></audio>
+        <audio id="audio" src="audio/story1.mp3" preload="auto"></audio>
+        <audio id="anotherSmartRabbitAudio" src="audio/another_smart_rabbit.mp3" preload="auto"></audio>
+    </div>
+
+    <script>
+        // تشغيل الصوت
+        function playAudio(filename) {
+            var audio = document.getElementById('smartRabbitAudio');
+            audio.src = filename;
+            audio.play();
+        }
+
+        // إضافة القصة إلى المفضلة
+        function bookmarkStory() {
+            alert("تمت إضافة القصة إلى المفضلة!");
+        }
+
+        // تشغيل صوت الأرنب الذكي
+        function playSmartRabbitAudio() {
+            var audio = document.getElementById('smartRabbitAudio');
+            audio.play();
+        }
+    </script>
+</body>
+</html>

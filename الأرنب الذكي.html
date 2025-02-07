@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>سر النجوم</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #6C63FF;
+            --secondary: #FF6584;
+            --accent: #FFD700;
+            --text: #2D3436;
+            --bg: #F9F7F7;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Comic Neue', cursive;
+        }
+        body {
+            background: var(--bg);
+            min-height: 100vh;
+            padding: 2rem;
+            text-align: center;
+            font-size: 1.8em; /* تكبير الخط */
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+        }
+        .story-header {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            padding: 2rem;
+        }
+        .story-title {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+        .age-group {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+        .story-image {
+            height: 300px;
+            background: url('https://via.placeholder.com/800x300?text=🐇+صورة+الأرنب') no-repeat center center/cover;
+        }
+        .story-content {
+            padding: 2rem;
+            line-height: 1.8;
+            color: var(--text);
+        }
+        .interactive-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        .icon-btn {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: var(--accent);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .icon-btn:hover {
+            transform: scale(1.1);
+            box-shadow: 0 4px 15px rgba(255,214,0,0.3);
+        }
+        /* تأثيرات خاصة */
+        .container::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(45deg, transparent, rgba(255,255,255,0.2), transparent);
+            transform: rotate(45deg);
+            animation: magicGlow 3s infinite linear;
+            opacity: 0.3;
+        }
+        @keyframes magicGlow {
+            0% { transform: translateX(-100%) rotate(45deg); }
+            100% { transform: translateX(100%) rotate(45deg); }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- رأس القصة -->
+        <div class="story-header">
+            <h1 class="story-title">الأرنب الذكي 🐇</h1>
+            <p class="age-group">العمر: 3-5 سنوات</p>
+        </div>
+    
+
+            <a href="https://ibb.co/29C3qwY"><img src="https://i.ibb.co/NvJ2xXn/28774438-02d1-4cd9-ae34-d03c88e80c08.png" alt="28774438-02d1-4cd9-ae34-d03c88e80c08" border="0"></a>
+            <p>في غابة بعيدة، عاش أرنب صغير ذكي يدعى نيني. كان نيني معروفًا بين الحيوانات بأنه سريع البديهة وشجاع.</p><p>في يوم من الأيام، بينما كان نيني يجمع الجزر، لاحظ ثعلبًا ماكرًا يتربص به. الثعلب كان دائمًا يحاول الإيقاع بالأرانب، لكنه لم ينجح أبدًا بسبب ذكائهم.</p>
+            <p>قال الثعلب بنبرة خادعة: "يا نيني، لدي حقل كامل من أجود أنواع الجزر، يمكنك أخذ كل ما تريد إذا استطعت حل لغز صعب!"</p>
+            <p>فكر نيني قليلاً ثم قال: "حسنًا، سأحاول حل اللغز." أعطاه الثعلب لغزًا معقدًا، لكن نيني، بفضل ذكائه، حل اللغز في دقائق قليلة.</p>
+            <p>شعر الثعلب بالإحباط وقال: "لن أستطيع خداعك أبدًا، يا نيني!" ومنذ ذلك اليوم، أصبح نيني صديقًا للجميع في الغابة، واعتُبر رمزًا للذكاء والشجاعة.</p>
+        </div>
+        <!-- أزرار التفاعل -->
+        <div class="interactive-buttons">
+            <div class="icon-btn" onclick="playAudio('audio/story1.mp3')">
+                <i class="fas fa-volume-up"></i>
+            </div>
+            <div class="icon-btn" onclick="bookmarkStory()">
+                <i class="fas fa-bookmark"></i>
+            </div>
+        </div>
+        <audio id="smartRabbitAudio" src="audio/الأرنب_الذكي.mp3" preload="auto"></audio>
+        <audio id="newSmartRabbitAudio" src="audio/another_smart_rabbit.mp3" preload="auto"></audio>
+        <audio id="audio" src="audio/story1.mp3" preload="auto"></audio>
+        <audio id="anotherSmartRabbitAudio" src="audio/another_smart_rabbit.mp3" preload="auto"></audio>
+    </div>
+
+    <script>
+        // تشغيل الصوت
+        function playAudio(filename) {
+            var audio = document.getElementById('smartRabbitAudio');
+            audio.src = filename;
+            audio.play();
+        }
+
+        // إضافة القصة إلى المفضلة
+        function bookmarkStory() {
+            alert("تمت إضافة القصة إلى المفضلة!");
+        }
+
+        // تشغيل صوت الأرنب الذكي
+        function playSmartRabbitAudio() {
+            var audio = document.getElementById('smartRabbitAudio');
+            audio.play();
+        }
+    </script>
+</body>
+</html>

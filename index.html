@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مغامرة الفراشة</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #6C63FF;
+            --secondary: #FF6584;
+            --accent: #FFD700;
+            --text: #2D3436;
+            --bg: #F9F7F7;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Comic Neue', cursive;
+        }
+
+        body {
+            background: var(--bg);
+            min-height: 100vh;
+            padding: 2rem;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .title {
+            font-size: 3.5rem;
+            color: var(--text);
+            text-shadow: 2px 2px 0 var(--accent);
+            margin-bottom: 1rem;
+        }
+
+        .stories-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            padding: 1rem;
+        }
+
+        .story-card {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+            cursor: pointer;
+            position: relative;
+        }
+
+        .story-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .card-header {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            padding: 1.5rem;
+            color: white;
+            position: relative;
+        }
+
+        .story-title {
+            font-size: 1.8rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .age-group {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+
+        .card-image {
+            height: 200px;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+
+        .card-content {
+            padding: 1.5rem;
+            position: relative;
+        }
+
+        .story-text {
+            color: white;
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .read-more {
+            background: var(--accent);
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border: none;
+            border-radius: 30px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .read-more:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 15px rgba(255,214,0,0.3);
+        }
+
+        .interactive-buttons {
+            position: absolute;
+            top: 1rem;
+            left: 1rem;
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .icon-btn {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.9);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .icon-btn:hover {
+            transform: scale(1.1);
+        }
+
+        .audio-player {
+            position: absolute;
+            bottom: 1rem;
+            right: 1rem;
+            background: rgba(255,255,255,0.9);
+            padding: 0.5rem 1rem;
+            border-radius: 30px;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        @media (max-width: 768px) {
+            .title {
+                font-size: 2.5rem;
+            }
+            
+            .story-card {
+                margin-bottom: 1.5rem;
+            }
+        }
+
+        /* تأثيرات خاصة */
+        .story-card::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(45deg, transparent, rgba(255,255,255,0.2), transparent);
+            transform: rotate(45deg);
+            animation: magicGlow 3s infinite linear;
+            opacity: 0.3;
+        }
+
+        @keyframes magicGlow {
+            0% { transform: translateX(-100%) rotate(45deg); }
+            100% { transform: translateX(100%) rotate(45deg); }
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+
+        body, p, h2, h3, h4, h5, h6, button {
+            color: white;
+        }
+        .title {
+            color: var(--text);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1 class="title">مملكة القصص السحرية 🧚♂️</h1>
+            <p>اكتشف عالمًا من المغامرات المدهشة!</p>
+        </header>
+
+        <div class="stories-grid">
+            <!-- قصة 1 -->
+            <div class="story-card">
+                <div class="interactive-buttons">
+                    <div class="icon-btn" onclick="playAudio('audio/story1.mp3')">
+                        <i class="fas fa-volume-up"></i>
+                    </div>
+                    <div class="icon-btn">
+                        <i class="fas fa-bookmark"></i>
+                    </div>
+                </div>
+                <div class="card-header">
+                    <h2 class="story-title">الأرنب الذكي</h2>
+                    <p class="age-group">العمر: 3-5 سنوات</p>
+                </div>
+                <div class="card-image">
+                    <a href="https://ibb.co/5xwf2Pvr">
+                        <img src="https://i.ibb.co/sJzMtZQK/f6c7eb3c-9c9d-45a0-99a5-3aa940b25f70.png" alt="f6c7eb3c-9c9d-45a0-99a5-3aa940b25f70" border="0">
+                    </a>
+                </div>
+                <div class="card-content">
+                    <p class="story-text">في غابة بعيدة، عاش أرنب صغير ذكي يدعى نيني. في يوم من الأيام، بينما كان نيني يجمع الجزر، لاحظ ثعلبًا ماكرًا يتربص به...</p>
+                    <a href="الأرنب الذكي.html" class="read-more">اقرأ المزيد</a>
+                </div>
+            </div>
+
+            <!-- قصة 2 -->
+            <div class="story-card">
+                <div class="interactive-buttons">
+                    <div class="icon-btn" onclick="playAudio('audio/story2.mp3')">
+                        <i class="fas fa-volume-up"></i>
+                    </div>
+                    <div class="icon-btn">
+                        <i class="fas fa-bookmark"></i>
+                    </div>
+                </div>
+                <div class="card-header">
+                    <h2 class="story-title">الكنز المفقود</h2>
+                    <p class="age-group">العمر: 6-8 سنوات</p>
+                </div>
+                <div class="card-image">
+                    <a href="https://ibb.co/5h4whtSx">
+                        <img src="https://i.ibb.co/xqLdqPB8/7648a211-a58f-46ad-94ae-86eb46406b61.png" alt="كنز مفقود" style="width: 100%; height: auto; max-width: 400px;">
+                    </a>
+                </div>
+                <div class="card-content">
+                    <p class="story-text">في أعماق المحيط، حيث تعيش الأسماك الملونة، اكتشف بطريق شجاع يدعى بوبو خريطة غامقة تؤدي إلى كنز أسطوري...</p>
+                    <button class="read-more" onclick="window.location.href='الكنز.html'">اقرأ المزيد</button>
+                </div>
+            </div>
+
+            <!-- قصة 3 -->
+            <div class="story-card">
+                <div class="interactive-buttons">
+                    <div class="icon-btn" onclick="playAudio('audio/story3.mp3')">
+                        <i class="fas fa-volume-up"></i>
+                    </div>
+                    <div class="icon-btn">
+                        <i class="fas fa-bookmark"></i>
+                    </div>
+                </div>
+                <div class="card-header">
+                    <h2 class="story-title">سفينة الفضاء</h2>
+                    <p class="age-group">العمر: 9-12 سنوات</p>
+                </div>
+                <div class="card-image">
+                    <a href="https://ibb.co/7d8pw72Y">
+                        <img src="https://i.ibb.co/gLHW5szj/849a3f6a-9b1d-424d-8bb9-015492a717ce.png" alt="849a3f6a-9b1d-424d-8bb9-015492a717ce" style="width: 100%; height: auto;">
+                    </a>
+                </div>
+                <div class="card-content">
+                    <p class="story-text">في عام 3023، انطلق ليام وزويا في رحلة فضائية غير مسبوقة لاكتشاف مجرات جديدة، ولكنهم واجهوا مفاجأة لم يتوقعوها...</p>
+                    <button class="read-more" onclick="window.location.href='الفضاء.html'">اقرأ المزيد</button>
+                </div>
+            </div>
+            <!-- قصة 4 -->
+            <div class="story-card">
+                <div class="interactive-buttons">
+                    <div class="icon-btn" onclick="playAudio('audio/story4.mp3')">
+                        <i class="fas fa-volume-up"></i>
+                    </div>
+                    <div class="icon-btn">
+                        <i class="fas fa-bookmark"></i>
+                    </div>
+                </div>
+                <div class="card-header">
+                    <h2 class="story-title">الأسد الملك</h2>
+                    <p class="age-group">العمر: 5-7 سنوات</p>
+                </div>
+                <div class="card-image">
+                    <a href="https://ibb.co/ZRm4z46s">
+                        <img src="https://i.ibb.co/bjJw5wgh/a26661e8-210f-43eb-b7f9-da5d6851e433.png" alt="a26661e8-210f-43eb-b7f9-da5d6851e433" border="0">
+                    </a>
+                </div>
+                <div class="card-content">
+                    <p class="story-text">في غابة مليئة بالحيوانات، كان هناك أسد يُدعى سيمبا، حلم بأن يصبح الملك يومًا ما...</p>
+                    <button class="read-more" onclick="window.location.href='الأسد الملك.html'">اقرأ المزيد</button>
+                </div>
+            </div>
+
+            <!-- قصة 5 -->
+            <div class="story-card">
+                <div class="interactive-buttons">
+                    <div class="icon-btn" onclick="playAudio('audio/story5.mp3')">
+                        <i class="fas fa-volume-up"></i>
+                    </div>
+                    <div class="icon-btn">
+                        <i class="fas fa-bookmark"></i>
+                    </div>
+                </div>
+                <div class="card-header">
+                    <h2 class="story-title">مغامرة الفراشة</h2>
+                    <p class="age-group">العمر: 4-6 سنوات</p>
+                </div>
+                <div class="card-image">
+                    <a href="https://ibb.co/1fmXFbyj">
+                        <img src="https://i.ibb.co/WW2zms8j/9c3a4fa6-3dcd-4754-be9d-ec38f214db1b.png" alt="9c3a4fa6-3dcd-4754-be9d-ec38f214db1b" border="0">
+                    </a>
+                </div>
+                <div class="card-content">
+                    <p class="story-text">بدأت فراشة صغيرة رحلة لاكتشاف العالم الخارجي، وواجهت الكثير من المغامرات...</p>
+                    <button class="read-more" onclick="window.location.href='مغامرة الفراشة.html'">اقرأ المزيد</button>
+                </div>
+            </div>
+
+            <!-- قصة 6 -->
+            <div class="story-card">
+                <div class="interactive-buttons">
+                    <div class="icon-btn" onclick="playAudio('audio/story6.mp3')">
+                        <i class="fas fa-volume-up"></i>
+                    </div>
+                    <div class="icon-btn">
+                        <i class="fas fa-bookmark"></i>
+                    </div>
+                </div>
+                <div class="card-header">
+                    <h2 class="story-title">سر النجوم</h2>
+                    <p class="age-group">العمر: 4-6 سنوات</p>
+                </div>
+                <div class="card-image">
+                    <a href="https://ibb.co/29C3qwY">
+                        <img src="https://i.ibb.co/NvJ2xXn/28774438-02d1-4cd9-ae34-d03c88e80c08.png" alt="28774438-02d1-4cd9-ae34-d03c88e80c08" border="0">
+                    </a>
+                </div>
+                <div class="card-content">
+                    <p class="story-text">تفاصيل القصة الجديدة...</p>
+                    <button class="read-more" onclick="window.location.href='سر النجوم.html'">اقرأ المزيد</button>
+                </div>
+            </div>
+
+            <!-- قصة 7 -->
+            <div class="story-card">
+                <div class="interactive-buttons">
+                    <div class="icon-btn" onclick="playAudio('audio/story7.mp3')">
+                        <i class="fas fa-volume-up"></i>
+                    </div>
+                    <div class="icon-btn">
+                        <i class="fas fa-bookmark"></i>
+                    </div>
+                </div>
+                <div class="card-header">
+                    <h2 class="story-title">المملكة السحرية</h2>
+                    <p class="age-group">العمر: 7-9 سنوات</p>
+                </div>
+                <div class="card-image">
+                    <a href="https://ibb.co/hJbCBfRW">
+                        <img src="https://i.ibb.co/jPmHyRvM/414d7d1e-35cb-420e-b170-e76fe346e500.png" alt="414d7d1e-35cb-420e-b170-e76fe346e500" border="0">
+                    </a>
+                </div>
+                <div class="card-content">
+                    <p class="story-text">اكتشفت أميرة صغيرة مملكة خفية مليئة بالسحر والعجائب...</p>
+                    <button class="read-more" onclick="window.location.href='المملكة السحرية.html'">اقرأ المزيد</button>
+                </div>
+            </div>
+
+            <!-- قصة 8 -->
+            <div class="story-card">
+                <div class="interactive-buttons">
+                    <div class="icon-btn" onclick="playAudio('audio/story8.mp3')">
+                        <i class="fas fa-volume-up"></i>
+                    </div>
+                    <div class="icon-btn">
+                        <i class="fas fa-bookmark"></i>
+                    </div>
+                </div>
+                <div class="card-header">
+                    <h2 class="story-title">رحلة الغواصة الصغيرة</h2>
+                    <p class="age-group">العمر: 6-8 سنوات</p>
+                </div>
+                <div class="card-image">
+                    <a href="https://ibb.co/7tGp00C1">
+                        <img src="https://i.ibb.co/5h5jJJ4R/8d2db8f7-756b-4ed2-b028-268685de9cd3.png" alt="8d2db8f7-756b-4ed2-b028-268685de9cd3" border="0">
+                    </a>
+                </div>
+                <div class="card-content">
+                    <p class="story-text">انطلقت غواصة صغيرة في أعماق المحيط لاكتشاف عوالم جديدة...</p>
+                    <button id="read-more" class="read-more">اقرا المزيد</button>
+                </div>
+            </div>
+
+            <!-- قصة 9 -->
+            <div class="story-card">
+                <div class="interactive-buttons">
+                    <div class="icon-btn" onclick="playAudio('audio/story9.mp3')">
+                        <i class="fas fa-volume-up"></i>
+                    </div>
+                    <div class="icon-btn">
+                        <i class="fas fa-bookmark"></i>
+                    </div>
+                </div>
+                <div class="card-header">
+                    <h2 class="story-title">عنوان القصة التاسعة</h2>
+                    <p class="age-group">العمر: 4-6 سنوات</p>
+                </div>
+                <div class="card-image">
+                    <a href="https://ibb.co/h1ZwcMMz"><img src="https://i.ibb.co/VpQ5xNN4/9db23690-d15b-4e21-b826-3be1eab3d1bb.png" alt="9db23690-d15b-4e21-b826-3be1eab3d1bb" border="0"></a>
+                </div>
+                <div class="card-content">
+                    <p class="story-text">تفاصيل القصة التاسعة...</p>
+                    <button class="read-more" onclick="window.location.href='أصدقاء الغابة.html'">اقرأ المزيد</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function toggleStory(button) {
+            const card = button.closest('.story-card');
+            const storyText = card.querySelector('.story-text');
+            storyText.style.webkitLineClamp = storyText.style.webkitLineClamp === '3' ? 'unset' : '3';
+            button.textContent = storyText.style.webkitLineClamp === '3' ? 'اقرأ المزيد' : 'اقرأ أقل';
+        }
+
+        function playAudio(url) {
+            new Audio(url).play();
+        }
+
+        // تأثيرات التفاعل مع الماوس
+        document.querySelectorAll('.story-card').forEach(card => {
+            card.addEventListener('mousemove', (e) => {
+                const rect = card.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                card.style.transform = `perspective(1000px) rotateX(${(y - rect.height/2)/10}deg) rotateY(${-(x - rect.width/2)/10}deg)`;
+            });
+
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = 'perspective(1000px) rotateX(0) rotateY(0)';
+            });
+        });
+
+        document.getElementById('read-more').addEventListener('click', function() {
+            window.location.href = 'رحلة الغواصة الصغيرة.html';
+        });
+    </script>
+</body>
+</html>

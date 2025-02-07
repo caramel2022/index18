@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>المملكة السحرية</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #6C63FF;
+            --secondary: #FF6584;
+            --accent: #FFD700;
+            --text: #2D3436;
+            --bg: #F9F7F7;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Comic Neue', cursive;
+        }
+        body {
+            background: var(--bg);
+            min-height: 100vh;
+            padding: 2rem;
+            text-align: center;
+            font-size: 1.8em; /* تكبير الخط */
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+        }
+        .story-header {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            padding: 2rem;
+        }
+        .story-title {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+        .age-group {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+        .story-image {
+            height: 300px;
+            background: url('https://via.placeholder.com/800x300?text=🐇+صورة+الأرنب') no-repeat center center/cover;
+        }
+        .story-content {
+            padding: 2rem;
+            line-height: 1.8;
+            color: var(--text);
+        }
+        .interactive-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        .icon-btn {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: var(--accent);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .icon-btn:hover {
+            transform: scale(1.1);
+            box-shadow: 0 4px 15px rgba(255,214,0,0.3);
+        }
+        /* تأثيرات خاصة */
+        .container::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(45deg, transparent, rgba(255,255,255,0.2), transparent);
+            transform: rotate(45deg);
+            animation: magicGlow 3s infinite linear;
+            opacity: 0.3;
+        }
+        @keyframes magicGlow {
+            0% { transform: translateX(-100%) rotate(45deg); }
+            100% { transform: translateX(100%) rotate(45deg); }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- رأس القصة -->
+        <div class="story-header">
+            <h1 class="story-title">المملكة السحرية</h1>
+            <p class="age-group">العمر: 3-5 سنوات</p>
+        </div>
+        <br><br><br><br>
+        <a href="https://ibb.co/hJbCBfRW"><img src="https://i.ibb.co/jPmHyRvM/414d7d1e-35cb-420e-b170-e76fe346e500.png" alt="414d7d1e-35cb-420e-b170-e76fe346e500" border="0"></a>
+        <p>اِكْتَشَفَتْ أُمِيرَةٌ صَغِيرَةٌ مَمْلَكَةً خَفِيَّةً مِلْءَى بِالسِّحْرِ وَالْعَجَائِبِ، كَانَتْ تُدْعَى الأُمِيرَةُ "لَيْلَى"، وَكَانَتْ ذَاتَ يَوْمٍ أَثْنَاءَ تَجَوُّلِهَا فِي غَابَةٍ قَرِيبَةٍ مِنْ قَصْرِهَا الْمَلَكِيِّ قَدْ وَجَدَتْ طَرِيقًا ضِيقًا مَغْطًى بِالْأَعْشَابِ وَالْوَرُودِ الْبَرِّيَّةِ. شَعَرَتْ بِفَضُولٍ كَبِيرٍ، فَقَرَّرَتْ اِتِّبَاعَ هَذَا الطَّرِيقِ الْمَجْهُولِ رُغْمَ تَحَذِيرَاتِ الْخُدَّامِ الَّذِينَ كَانُوا يُرَاقِبُونَهَا</p>
+        <p>بَعْدَمَا مَشَتْ لِبَعْضِ الْوَقْتِ، وَجَدَتْ نَفْسَهَا أَمَامَ بَوَّابَةٍ مِنَ الذَّهَبِ اللَّامِعِ، مُزَيَّنَةً بِنَقُوشٍ غَرِيبَةٍ وَمُذْهِلَةٍ. إِذَا بِهَا تَفْتَحُهَا بِهَدُوءٍ، وَتَدْخُلُ إِلَى عَالَمٍ آخَرَ كُلِّيًا عَنْ عَالَمِهَا الَّذِي اعْتَادَتْهُ. كَانَ هُنَاكَ أَشْجَارٌ ضَخْمَةٌ بِأَلْوَانٍ زَاهِيَةٍ، وَأَنْهَارٌ مِنَ الْمَاءِ اللَّامِعِ، وَكُلُّ شَيْءٍ يَنْبُضُ بِالْحَيَاةِ وَالسِّحْرِ.</p>
+        <p>فِي وَسَطِ هَذِهِ الْمَمْلَكَةِ السِّحْرِيَّةِ، التَقَتْ لَيْلَى بِشَخْصِيَّةٍ غَرِيبَةٍ: كَائِنٌ صَغِيرٌ يُشَبِّهُ الْفَأْرَ وَلَكِنَّهُ يَتَحَدَّثُ بِلُغَةٍ بَشَرِيَّةٍ وَيَحْمِلُ عَصَا سِحْرِيَّةً. قَدَّمَ نَفْسَهُ بِاسْمِ "لِينُو"، وَقَالَ إِنَّهُ حَارِسُ الْمَمْلَكَةِ السِّحْرِيَّةِ، وَأَنَّهُ جَاءَ لِلتَّأَكُّدِ مِنْ نِيَّاتِ الزُّوَّارِ الْجُدُدِ.</p>
+        <p>"لِمَاذَا جِئْتِ إِلَى هُنََا؟" سَأَلَ لِينُو بِحَذَرٍ.</p>
+        <p>رَدَّتْ لَيْلَى بِصَوْتٍ هَادِئٍ وَلَكِنْ وَاثِقٍ: "لَمْ أَكُنْ أَعْلَمُ أَنَّ هَذَا الْمَكَانَ مُوجُودٌ، لَكِنِّي شَعَرْتُ بِأَنَّهُ هُنَاكَ شَيْئًا مُهِمًّا أَحْتَاجُ إِلَى اِكْتِشَافِهِ."</p>
+        <p>أَبْتَسَمَ لِينُو وَقَالَ: "إِنَّ هَذِهِ الْمَمْلَكَةَ لَيْسَتْ مَكَانًا عَادِيًا. إِنَّهَا مَمْلَكَةُ الأَحْلاَمِ وَالأَسْرَارِ، وَهِيَ مَحْمِيَّةٌ بِقُوَّةٍ خَاصَّةٍ تُسَمَّى بِالْقَلْبِ السِّحْرِيِّ. لَكِنَّ الْقَلْبَ بَدَأَ يَتَعَرَّضُ لِخَطَرٍ كَبِيرٍ بِسَبَبِ ظَلامٍ يَنْمُو فِي أَعْمَاقِ الْغَابَةِ."</p>
+        <p>شَعَرَتْ لَيْلَى بِالْقَلْقِ، وَسَأَلَتْ: "كَيْفَ يُمْكِنُنِي مُسَاعَدَتُكُمْ؟"</p>
+        <p>أَجَابَ لِينُو: "لَقَدْ اِخْتَارَتْ الْقُوَى السِّحْرِيَّةُ أَنْ تَكُونِي أَنْتِ الشَّخْصُ الْوَحِيدُ الْذِي يُمْكِنُهُ إِنْقَاذُنَا. عَلَيْكِ الْعُثُورُ عَلَى الْقَلْبِ السِّحْرِيِّ وَإِعَادَةُ إِشْعَاعِهِ قَبْلَ أَنْ يَبْتَلِعَهُ الظَّلامُ لِلأَبَدِ."</p>
+        <p>بَدَأَتْ لَيْلَى رِحْلَتَهَا خِلالَ الْغَابَاتِ السِّحْرِيَّةِ، حَيْثُ وَاجَهَتْ عِدَّةَ تَحَدِّيَاتٍ: أَحْجِيَةٌ مُعْقَدَةٌ، وَحَيَوَانَاتٌ غَرِيبَةٌ، وَأَرْوَاحٌ قَدِيمَةٌ حَاجَتْ إِلَى الْمُسَاعَدَةِ. فِي كُلِّ مَرَّةٍ كَانَتْ تُواجِهُ فِيهَا تَحْدِيًا، كَانَتْ تَسْتَعِينُ بِحُكْمَتِهَا وَشَجَاعَتِهَا لِتَعْبُرَهُ.</p>
+        <p>وَفِي النِّهَايَةِ، وَصَلَتْ إِلَى الْكَهْفِ الَّذِي كَانَ فِيهِ الْقَلْبُ السِّحْرِيُّ، حَيْثُ وَجَدَتْهُ مُحَاطًا بِغَيُومٍ مِنَ الظَّلامِ. اِسْتَخْدَمَتْ لَيْلَى القَلِيلَ مِنَ الضَّوْءِ الَّذِي كَانَتْ تَحْمِلُهُ مَعَهَا (هَدِيَّةٌ مِنْ لِينُو) لِإِظَاءَةِ الْغُرْفَةِ، ثُمَّ بَدَأَتْ بِتَكْرَارِ كَلِمَاتٍ سِحْرِيَّةٍ عَلَّمَهَا إِيَّاهَا الْحَارِسُ الصَّغِيرُ.</p>
+        <p>بَدَأَ الْقَلْبُ السِّحْرِيُّ بِالْتُوهُجِ مَرَّةً أُخْرَى، وَأَصْبَحَتْ الْمَمْلَكَةُ بِأَكْمَلِهَا أَكْثَرَ إِشْرَاقًا وَجَمَالًا مِمَّا كَانَتْ عَلَيْهِ. شَكَرَهَا لِينُو وَزُعَمَاءُ الْمَمْلَكَةِ السِّحْرِيَّةِ، وَأَعْطَوْا لَيْلَى هَدِيَّةً رَمْزِيَّةً: قَلَائِدٌ سِحْرِيَّةٌ تَحْتَوِي عَلَى قَلْبٍ صَغِيرٍ يَعْكِسُ قَلْبَهَا الْحَقِيقِيَّ.</p>
+        <p>عَادَتْ لَيْلَى إِلَى قَصْرِهَا الْمَلَكِيِّ، لَكِنَّهَا لَمْ تَنْسَ أَبَدًا تِلْكَ الْمَمْلَكَةَ السِّحْرِيَّةَ وَمَا تَعَلَّمَتْهُ مِنْهَا: أَنَّ الشَّجَاعَةَ وَالْحِكْمَةَ يُمْكِنُهُمَا أَنْ يَفْتَحَا أَبْوَابًا جَدِيدَةً وَغَيْرَ مُتَوَقَّعَةٍ.</p>
+        <p>وَمِنْ ذَلِكَ الْيَوْمِ، أَصْبَحَتْ الأُمِيرَةُ لَيْلَى رَمْزًا لِلْإِلْهَامِ فِي مَمْلَكَتِهَا، وَظَلَّتْ دَائِمًا تَذْكُرُ قِصَّتَهَا وَكَيْفَ غَيَّرَتْ حَيَاتَهَا لِلأَبَدِ.</p>
+        </div>
+        <!-- أزرار التفاعل -->
+        <div class="interactive-buttons">
+            <div class="icon-btn" onclick="playAudio('audio/story1.mp3')">
+                <i class="fas fa-volume-up"></i>
+            </div>
+            <div class="icon-btn" onclick="bookmarkStory()">
+                <i class="fas fa-bookmark"></i>
+            </div>
+        </div>
+        <audio id="smartRabbitAudio" src="audio/الأرنب_الذكي.mp3" preload="auto"></audio>
+        <audio id="newSmartRabbitAudio" src="audio/another_smart_rabbit.mp3" preload="auto"></audio>
+        <audio id="audio" src="audio/story1.mp3" preload="auto"></audio>
+        <audio id="anotherSmartRabbitAudio" src="audio/another_smart_rabbit.mp3" preload="auto"></audio>
+    </div>
+
+    <script>
+        // تشغيل الصوت
+        function playAudio(filename) {
+            var audio = document.getElementById('smartRabbitAudio');
+            audio.src = filename;
+            audio.play();
+        }
+
+        // إضافة القصة إلى المفضلة
+        function bookmarkStory() {
+            alert("تمت إضافة القصة إلى المفضلة!");
+        }
+
+        // تشغيل صوت الأرنب الذكي
+        function playSmartRabbitAudio() {
+            var audio = document.getElementById('smartRabbitAudio');
+            audio.play();
+        }
+    </script>
+</body>
+</html>

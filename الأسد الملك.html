@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>قصة الأرنب الذكي</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #6C63FF;
+            --secondary: #FF6584;
+            --accent: #FFD700;
+            --text: #2D3436;
+            --bg: #F9F7F7;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Comic Neue', cursive;
+        }
+        body {
+            background: var(--bg);
+            min-height: 100vh;
+            padding: 2rem;
+            text-align: center;
+            font-size: 1.8em; /* تكبير الخط */
+            margin-left: 15%; /* Left margin */
+            margin-right: 15%; /* Right margin */
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+        }
+        .story-header {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            padding: 2rem;
+        }
+        .story-title {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+        .age-group {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+        .story-image {
+            height: 300px;
+            background: url('https://via.placeholder.com/800x300?text=🐇+صورة+الأرنب') no-repeat center center/cover;
+        }
+        .story-content {
+            padding: 2rem;
+            line-height: 1.8;
+            color: var(--text);
+        }
+        .interactive-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        .icon-btn {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: var(--accent);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .icon-btn:hover {
+            transform: scale(1.1);
+            box-shadow: 0 4px 15px rgba(255,214,0,0.3);
+        }
+        /* تأثيرات خاصة */
+        .container::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(45deg, transparent, rgba(255,255,255,0.2), transparent);
+            transform: rotate(45deg);
+            animation: magicGlow 3s infinite linear;
+            opacity: 0.3;
+        }
+        @keyframes magicGlow {
+            0% { transform: translateX(-100%) rotate(45deg); }
+            100% { transform: translateX(100%) rotate(45deg); }
+        }
+        .image-container {
+            margin-top: 20px; /* Adjust the space as needed */
+        }
+        .story-text {
+            font-size: 1.2em;
+            margin-top: 15px;
+            text-align: justify;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- رأس القصة -->
+        <div class="story-header">
+            <h1 class="story-title">الأسد الملك</h1>
+            <p class="age-group">العمر: 3-5 سنوات</p>
+        </div>
+        <div class="image-container">
+            <a href="https://ibb.co/ZRm4z46s">
+                <img src="https://i.ibb.co/bjJw5wgh/a26661e8-210f-43eb-b7f9-da5d6851e433.png" alt="a26661e8-210f-43eb-b7f9-da5d6851e433" border="0"></a>
+        </div>
+        <p class="story-text">فِي غَابَةٍ مَلِئَةٍ بِالْحَيَوَانَاتِ، كَانَ هُنَاكَ أَسَدٌ يُدْعَى سِيمْبَا، حَلُمَ أَنْ يُصْبِحَ الْمَلِكَ يَوْمًا مَا. كَانَ سِيمْبَا صَغِيرًا فِي السِّنِّ لَكِنَّهُ مَمْتَلِئٌ بِالإِصْرَارِ وَالشَّجَاعَةِ. كَانَ يَعِيشُ مَعَ وَالِدِهِ الأَسَدِ الْقَوِيِّ "مُوفَاسَا"، الَّذِي كَانَ مَلِكَ الْغَابَةِ وَرَمْزًا لِلْحِكْمَةِ وَالْعَدَالَةِ. كَانَتِ الْغَابَةُ تَحْتَ قِيَادَتِهِ مَكَانًا مَلِئًا بِالسَّلَامِ وَالْتَّعاوُنِ بَيْنَ جَمِيعِ الْحَيَوَانَاتِ.</p>
+<p class="story-text">كَانَ لِمُوفَاسَا شَقِيقٌ يُدْعَى "سْكَار"، وَكَانَ سْكَارُ دَائِمَ الغَيْرَةِ مِنْ أَخِيهِ بِسَبَبِ مَكَانَتِهِ كَمَلِكٍ. لَمْ يَكُنْ عِنْدَهُ نَفْسُ الْقِيَمِ أَوِ الْأَخْلاَقِ الَّتِي يَتَمَتَّعُ بِهَا مُوفَاسَا، بَلْ كَانَ طَامِعًا فِي السُّلْطَةِ وَلَا يَتَرَدَّدُ فِي اسْتِخْدَامِ الْخِدَاعِ لِتَحْقِيقِ أَهْدَافِهِ.</p>
+<p class="story-text">ذَاتُ يَوْمٍ، خَطَّطَ سْكَارُ لِلتَّخَلُّصِ مِنْ مُوفَاسَا لِيَتَمَكَّنَ مِنَ الإِسْتِيلَاءِ عَلَى الْعَرْشِ. اسْتَغَلَّ سْكَارُ فَضُولَ سِيمْبَا وَحُبَّهُ لِلْمُغَامَرَةِ، فَأَقْنَعَهُ بِزِيَارَةِ مَنْطِقَةٍ خَطِرَةٍ فِي الْغَابَةِ تُعْرَفُ بِ"وَادِي الهِيَاقِلِ". كَانَ هَذَا الْمَكَانُ مَحْظُورًا لِأَنَّ الْحَيَوَانَاتِ الْمُفْتَرِسَةَ تَخْتَبِئُ فِيهِ. رُغْمَ تَحْذِيرَاتِ أَبِيهِ، قَرَّرَ سِيمْبَا أَنْ يُثَبِّتَ جَدَارَتَهُ وَيَذْهَبَ إِلَى الْوَادِي مَعَ صَدِيقَتِهِ النَّمْرِيَّةِ الصَّغِيرَةِ "نَالَا".</p>
+<p class="story-text">فِي أَثْنَاءِ وُجُودِهِمَا هُنَاكَ، نَجَحَ سْكَارُ فِي إِيجَادِ فُوضَى كَبِيرَةٍ بِاسْتِخْدَامِ( قطيع الجري الهستيري,  البومبا) لإِخَافَةِ سِيمْبَا وَنَالَا. تَمَكَّنَ سِيمْبَا مِنْ إِنْقَاذِ نَالَا وَإِعَادَتِهَا إِلَى الْأَمَانِ، لَكِنَّهُ عَلِقَ فِي الْفُوضَى. إِذَا عَلِمَ مُوفَاسَا بِمَا حَدَثَ، هَرَعَ لِإِنْقَاذِ ابْنِهِ دُونَ تَرَدُّدٍ، لَكِنَّهُ تَعَرَّضَ لِخِيَانَةِ شَقِيقِهِ سْكَار، الَّذِي دَفَعَهُ لِلْوُقُوعِ مِنْ عَلَى الْجَبَلِ لِيُلاَقِي حَتْفَهُ.</p>
+<p class="story-text">شَعَرَ سِيمْبَا بِالْحُزْنِ الشَّدِيدِ وَخِيبَةِ الأَمَلِ بَعْدَ فِقْدَانِ وَالِدِهِ. وَفِي تِلْكَ اللَّحْظَةِ، اسْتَغَلَّ سْكَارُ وَضْعَ سِيمْبَا النَّفْسِيَّ وَأَقْنَعَهُ بِأَنَّهُ الْمَسْؤُولُ عَنْ وَفَاةِ وَالِدِهِ، مَا جَعَلَ سِيمْبَا يَشْعُرُ بِالذَّنْبِ. تَرَكَ سِيمْبَا الْغَابَةَ وَقَرَّرَ أَلَّا يَعُودَ أَبَدًا.</p>
+<p class="story-text">مَعَ مَرُورِ السِّنِينَ، أَصْبَحَ سْكَارُ الْمَلِكَ الْجَدِيدَ لِلْغَابَةِ، وَلَكِنْ حُكْمُهُ كَانَ ظَالِمًا وَغَيْرَ عَادِلٍ. اسْتَشْرَى الْجُوعُ وَالْفَقْرُ بَيْنَ الْحَيَوَانَاتِ، وَتَحَوَّلَتِ الْغَابَةُ إِلَى مَكَانٍ قَاحِلٍ وَمِلْءٍ بِالصِّرَاعَاتِ.</p>
+<p class="story-text">بَيْنَمَا كَانَ سِيمْبَا بَعِيدًا عَنِ الْغَابَةِ، عَاشَ حَيَاةً بَسِيطَةً مَعَ بَعْضِ الأَصْدِقَاءِ الْجُدُدِ مِثْلُ "تِمْبَا" وَ"بُوكُو"، اللَّذَيْنِ عَلَّمَاهُ كَيْفَ يَسْتَمْتِعُ بِالْحَيَاةِ دُونَ التَّفَكُّرِ فِي الْمَاضِي. لَكِنْ مَعَ مَرُورِ الزَّمَانِ، بَدَأَ سِيمْبَا يَتَذَكَّرُ وَاجِبَهُ تُجَاهَ غَابَتِهِ وَأَسْرَتِهِ.</p>
+<p class="story-text">فِي وَاحِدٍ مِنَ الأَيَّامِ، ظَهَرَتْ لَهُ رُوحُ وَالِدِهِ مُوفَاسَا فِي حُلْمٍ وَقَالَ لَهُ: "سِيمْبَا، أَنْتَ الْمَلِكُ الْحَقِيقِي. يَجِبُ أَنْ تَعُودَ إِلَى الْغَابَةِ وَتَسْتَعِيدَ مَكَانَتَكَ." أَدْرَكَ سِيمْبَا أَنْ عَلَيْهِ أَنْ يُواجِهَ مَاضِيهِ وَأَنْ يَحْمِلَ مَسْؤُولِيَّاتِهِ.</p>
+<p class="story-text">عَادَ سِيمْبَا إِلَى الْغَابَةِ مَعَ نَالَا وَبَعْضِ الأَصْدِقَاءِ الْآخَرِينَ، وَتَمَكَّنُوا مِنَ الإِطَاحَةِ بِحُكْمِ سْكَارِ الْمُسْتَبِدِّ. فِي مَعْرَكَةٍ شَرِسَةٍ، تَمَكَّنَ سِيمْبَا مِنْ هَزِيمَةِ عَمِّهِ الشِّرِّيرِ وَفَرَضَ السَّلَامَ مَرَّةً أُخْرَى.</p>
+<p class="story-text">بَاتَ سِيمْبَا الْمَلِكَ الْجَدِيدَ لِلْغَابَةِ، وَأَعَادَ إِلَيْهَا الازْدِهَارَ وَالْعَدَالَةَ. تَعَلَّمَ سِيمْبَا أَنَّ الْمَسْؤُولِيَّةَ لَيْسَتْ ذَاتِ قُوَّةٍ فَقَطْ، بَلْ هِيَ أَيْضًا الْحُبُّ وَالرَّحْمَةُ تُجَاهَ الْجَمِيعِ. وَمَعَ مَرُورِ الأَيَّامِ، أَصْبَحَتِ الْغَابَةُ تَحْتَ قِيَادَتِهِ مَكَانًا جَمِيلًا حَيْثُ يَعِيشُ الْجَمِيعُ بِالسَّلَامِ وَالسَّعَادَةِ.</p>
+<p class="story-text">وَهَكَذَا، تَحَقَّقَ حُلْمُ سِيمْبَا وَأَصْبَحَ الْمَلِكَ الَّذِي كَانَ يَحْلُمُ بِهِ دَائِمًا، لَيْسَ فَقَطْ لِأَنَّهُ أَسَدٌ قَوِيٌّ، بَلْ لِأَنَّهُ كَانَ زَعِيمًا حَكِيمًا وَحَنُونًا.</p>
+        </div>
+        <!-- أزرار التفاعل -->
+        <div class="interactive-buttons">
+            <div class="icon-btn" onclick="playAudio('audio/story1.mp3')">
+                <i class="fas fa-volume-up"></i>
+            </div>
+            <div class="icon-btn" onclick="bookmarkStory()">
+                <i class="fas fa-bookmark"></i>
+            </div>
+        </div>
+        <audio id="smartRabbitAudio" src="audio/الأرنب_الذكي.mp3" preload="auto"></audio>
+        <audio id="newSmartRabbitAudio" src="audio/another_smart_rabbit.mp3" preload="auto"></audio>
+        <audio id="audio" src="audio/story1.mp3" preload="auto"></audio>
+        <audio id="anotherSmartRabbitAudio" src="audio/another_smart_rabbit.mp3" preload="auto"></audio>
+    </div>
+
+    <script>
+        // تشغيل الصوت
+        function playAudio(filename) {
+            var audio = document.getElementById('smartRabbitAudio');
+            audio.src = filename;
+            audio.play();
+        }
+
+        // إضافة القصة إلى المفضلة
+        function bookmarkStory() {
+            alert("تمت إضافة القصة إلى المفضلة!");
+        }
+
+        // تشغيل صوت الأرنب الذكي
+        function playSmartRabbitAudio() {
+            var audio = document.getElementById('smartRabbitAudio');
+            audio.play();
+        }
+    </script>
+</body>
+</html>
