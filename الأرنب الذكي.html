@@ -22,45 +22,79 @@
         body {
             background: var(--bg);
             min-height: 100vh;
-            padding: 2rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             text-align: center;
-            font-size: 1.8em; /* تكبير الخط */
+            font-size: 1.8rem; /* Increased font size */
         }
         .container {
             max-width: 800px;
-            margin: 0 auto;
+            width: 100%;
             background: white;
             border-radius: 20px;
             overflow: hidden;
             box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+            position: relative;
+            padding: 1rem;
         }
         .story-header {
             background: linear-gradient(135deg, var(--primary), var(--secondary));
             color: white;
-            padding: 2rem;
+            padding: 1.5rem;
+            border-bottom: 2px solid var(--accent);
         }
         .story-title {
             font-size: 2.5rem;
             margin-bottom: 0.5rem;
         }
         .age-group {
-            font-size: 0.9rem;
+            font-size: 1.2rem;
             opacity: 0.9;
         }
         .story-image {
-            height: 300px;
-            background: url('https://via.placeholder.com/800x300?text=🐇+صورة+الأرنب') no-repeat center center/cover;
+            margin: 1rem 0; /* مسافة بين الصورة والعناصر الأخرى */
         }
+        /* تحسين استجابة الصورة */
+        .story-image img {
+            width: 100%;
+            height: auto; /* الحفاظ على النسبة الأصلية */
+            display: block;
+        }
+        /* نص القصة أسفل الصفحة بعد الصورة */
         .story-content {
-            padding: 2rem;
+            padding: 1rem;
             line-height: 1.8;
             color: var(--text);
+            font-size: 1.5rem;
+            margin-top: 1rem; /* المسافة بين الصورة والنص */
+            font-family: 'Boutrousnews H1', sans-serif; /* تغيير الخط إلى Boutrousnews H1 */
+            font-weight: bold; /* لجعل النص عريضًا */
+            font-size: 18px; /* حجم الخط */
+            line-height: 1.6; /* ارتفاع السطر */
         }
-        .interactive-buttons {
-            display: flex;
-            justify-content: center;
-            gap: 1rem;
+        /* زر القصة التالية */
+        .next-story {
             margin-top: 1rem;
+            padding: 0.8rem 1.5rem;
+            background: var(--primary);
+            color: white;
+            border: none;
+            border-radius: 20px;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .next-story:hover {
+            background: var(--secondary);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+        /* زري الصوت وإضافة إلى المفضلة في أسفل وسط الصفحة جنبًا إلى جنب */
+        .bottom-actions {
+            display: flex;
+            justify-content: center; /* لتجميع الزرين في الوسط */
+            gap: 1rem; /* المسافة بين الزرين */
+            margin-top: 2rem;
         }
         .icon-btn {
             width: 50px;
@@ -73,78 +107,72 @@
             justify-content: center;
             cursor: pointer;
             transition: all 0.3s ease;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
         }
         .icon-btn:hover {
             transform: scale(1.1);
-            box-shadow: 0 4px 15px rgba(255,214,0,0.3);
+            box-shadow: 0 6px 15px rgba(0,0,0,0.2);
         }
-        /* تأثيرات خاصة */
-        .container::before {
-            content: '';
+        .back-button {
             position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: linear-gradient(45deg, transparent, rgba(255,255,255,0.2), transparent);
-            transform: rotate(45deg);
-            animation: magicGlow 3s infinite linear;
-            opacity: 0.3;
-        }
-        @keyframes magicGlow {
-            0% { transform: translateX(-100%) rotate(45deg); }
-            100% { transform: translateX(100%) rotate(45deg); }
+            top: 1rem;
+            left: 1rem;
+            background: var(--primary);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 10px;
+            text-decoration: none;
         }
     </style>
 </head>
 <body>
     <div class="container">
+        <a href="index.html" class="back-button">عودة</a>
         <!-- رأس القصة -->
         <div class="story-header">
-            <h1 class="story-title">الأرنب الذكي 🐇</h1>
-            <p class="age-group">العمر: 3-5 سنوات</p>
+            <h1 class="story-title">الأرنبُ الذكيُ 🐇</h1>
+            <p class="age-group">العمرُ: 3-5 سنوات</p>
         </div>
-    
-
-            <a href="https://ibb.co/29C3qwY"><img src="https://i.ibb.co/NvJ2xXn/28774438-02d1-4cd9-ae34-d03c88e80c08.png" alt="28774438-02d1-4cd9-ae34-d03c88e80c08" border="0"></a>
-            <p>في غابة بعيدة، عاش أرنب صغير ذكي يدعى نيني. كان نيني معروفًا بين الحيوانات بأنه سريع البديهة وشجاع.</p><p>في يوم من الأيام، بينما كان نيني يجمع الجزر، لاحظ ثعلبًا ماكرًا يتربص به. الثعلب كان دائمًا يحاول الإيقاع بالأرانب، لكنه لم ينجح أبدًا بسبب ذكائهم.</p>
-            <p>قال الثعلب بنبرة خادعة: "يا نيني، لدي حقل كامل من أجود أنواع الجزر، يمكنك أخذ كل ما تريد إذا استطعت حل لغز صعب!"</p>
-            <p>فكر نيني قليلاً ثم قال: "حسنًا، سأحاول حل اللغز." أعطاه الثعلب لغزًا معقدًا، لكن نيني، بفضل ذكائه، حل اللغز في دقائق قليلة.</p>
-            <p>شعر الثعلب بالإحباط وقال: "لن أستطيع خداعك أبدًا، يا نيني!" ومنذ ذلك اليوم، أصبح نيني صديقًا للجميع في الغابة، واعتُبر رمزًا للذكاء والشجاعة.</p>
+        <!-- الصورة بحجمها الكامل -->
+        <div class="story-image">
+            <a href="https://ibb.co/HTbfDKMS"><img src="https://i.ibb.co/d4Vw0f3T/f6c7eb3c-9c9d-45a0-99a5-3aa940b25f70.png" alt="f6c7eb3c-9c9d-45a0-99a5-3aa940b25f70" border="0"></a>
         </div>
-        <!-- أزرار التفاعل -->
-        <div class="interactive-buttons">
-            <div class="icon-btn" onclick="playAudio('audio/story1.mp3')">
+        <!-- النص أسفل الصفحة بعد الصورة -->
+        <div class="story-content">
+            <p>في غابةٍ بعيدةٍ، عاشَ أرنبٌ صغيرٌ ذكيٌ يدعى نيني. كانَ نيني معروفًا بينَ الحيواناتِ بأنَّه سريعُ البديهةِ وشجاعٌ.</p>
+            <p>في يومٍ من الأيامِ، بينما كانَ نيني يجمعُ الجزرَ، لاحظَ ثعلبًا ماكرًا يتربصُ به. الثعلبُ كانَ دائمًا يحاولُ الإيقاعَ بالأرانبِ، لكنه لم ينجحْ أبدًا بسببِ ذكائهم.</p>
+            <p>قالَ الثعلبُ بنبرةٍ خادعةٍ: "يا نيني، لدي حقلٌ كاملٌ من أجودِ أنواعِ الجزرِ، يمكنكَ أخذُ كلِّ ما تريدُ إذا استطعتَ حلَّ لغزٍ صعبٍ!"</p>
+            <p>فكرَ نيني قليلًا ثم قالَ: "حسنًا، سأحاولُ حلَّ اللغزِ." أعطاهُ الثعلبُ لغزًا معقدًا، لكنَّ نيني، بفضلِ ذكائهِ، حلَّ اللغزَ في دقائقَ قليلةٍ.</p>
+            <p>شعرَ الثعلبُ بالإحباطِ وقالَ: "لن أستطيعَ خداعَك أبدًا، يا نيني!"</p>
+        </div>
+        <!-- زري الصوت وإضافة إلى المفضلة في أسفل وسط الصفحة جنبًا إلى جنب -->
+        <div class="bottom-actions">
+            <div class="icon-btn" onclick="toggleAudio()">
                 <i class="fas fa-volume-up"></i>
             </div>
             <div class="icon-btn" onclick="bookmarkStory()">
                 <i class="fas fa-bookmark"></i>
             </div>
         </div>
-        <audio id="smartRabbitAudio" src="audio/الأرنب_الذكي.mp3" preload="auto"></audio>
-        <audio id="newSmartRabbitAudio" src="audio/another_smart_rabbit.mp3" preload="auto"></audio>
-        <audio id="audio" src="audio/story1.mp3" preload="auto"></audio>
-        <audio id="anotherSmartRabbitAudio" src="audio/another_smart_rabbit.mp3" preload="auto"></audio>
+        <audio id="smartRabbitAudio" src="audio/Rabbit.mp3" preload="auto"></audio>
+        <script>
+            let isPlaying = false;
+
+            function toggleAudio() {
+                const audio = document.getElementById('smartRabbitAudio');
+                if (isPlaying) {
+                    audio.pause();
+                    isPlaying = false;
+                } else {
+                    audio.play();
+                    isPlaying = true;
+                }
+            }
+
+            function bookmarkStory() {
+                alert("تمت إضافة القصة إلى المفضلة!");
+            }
+        </script>
     </div>
-
-    <script>
-        // تشغيل الصوت
-        function playAudio(filename) {
-            var audio = document.getElementById('smartRabbitAudio');
-            audio.src = filename;
-            audio.play();
-        }
-
-        // إضافة القصة إلى المفضلة
-        function bookmarkStory() {
-            alert("تمت إضافة القصة إلى المفضلة!");
-        }
-
-        // تشغيل صوت الأرنب الذكي
-        function playSmartRabbitAudio() {
-            var audio = document.getElementById('smartRabbitAudio');
-            audio.play();
-        }
-    </script>
 </body>
 </html>

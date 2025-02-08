@@ -22,37 +22,27 @@
         body {
             background: var(--bg);
             min-height: 100vh;
-            padding: 2rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             text-align: center;
-            font-size: 1.8em; /* تكبير الخط */
-            font-family: 'Arial', sans-serif;
-            line-height: 1.6;
-            margin: 20px;
-            color: #333;
-        }
-        h1, h2, h3 {
-            color: white;
-        }
-        p {
-            margin-bottom: 15px;
-        }
-        .highlight {
-            background-color: #f0f8ff;
-            padding: 10px;
-            border-left: 5px solid #4CAF50;
+            font-size: 1.8rem;
         }
         .container {
             max-width: 800px;
-            margin: 0 auto;
+            width: 100%;
             background: white;
             border-radius: 20px;
             overflow: hidden;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            position: relative;
+            padding: 1rem;
         }
         .story-header {
             background: linear-gradient(135deg, var(--primary), var(--secondary));
             color: white;
             padding: 2rem;
+            border-bottom: 2px solid var(--accent);
         }
         .story-title {
             font-size: 2.5rem;
@@ -62,24 +52,37 @@
             font-size: 0.9rem;
             opacity: 0.9;
         }
+        .story-image-container {
+            margin: 2rem 0;
+            border-radius: 10px;
+            overflow: hidden;
+        }
         .story-image {
-            height: 300px;
-            background: url('https://via.placeholder.com/800x300?text=🐇+صورة+الأرنب') no-repeat center center/cover;
+            width: 100%;
+            height: auto;
+            object-fit: cover;
         }
         .story-content {
             padding: 2rem;
             line-height: 1.8;
             color: var(--text);
         }
+        .highlight {
+            background-color: #f0f8ff;
+            padding: 10px;
+            border-left: 5px solid #4CAF50;
+            margin: 1rem 0;
+        }
         .interactive-buttons {
             display: flex;
             justify-content: center;
-            gap: 1rem;
-            margin-top: 1rem;
+            gap: 1.5rem;
+            margin-top: 2rem;
+            margin-bottom: 1.5rem;
         }
         .icon-btn {
-            width: 50px;
-            height: 50px;
+            width: 60px;
+            height: 60px;
             border-radius: 50%;
             background: var(--accent);
             color: white;
@@ -88,10 +91,11 @@
             justify-content: center;
             cursor: pointer;
             transition: all 0.3s ease;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
         }
         .icon-btn:hover {
             transform: scale(1.1);
-            box-shadow: 0 4px 15px rgba(255,214,0,0.3);
+            box-shadow: 0 6px 15px rgba(255, 214, 0, 0.3);
         }
         /* تأثيرات خاصة */
         .container::before {
@@ -101,7 +105,7 @@
             left: -50%;
             width: 200%;
             height: 200%;
-            background: linear-gradient(45deg, transparent, rgba(255,255,255,0.2), transparent);
+            background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.2), transparent);
             transform: rotate(45deg);
             animation: magicGlow 3s infinite linear;
             opacity: 0.3;
@@ -119,9 +123,14 @@
             <h1 class="story-title">مغامرة الفراشة</h1>
             <p class="age-group">العمر: 3-5 سنوات</p>
         </div>
-    
 
-            <a href="https://ibb.co/1fmXFbyj"><img src="https://i.ibb.co/WW2zms8j/9c3a4fa6-3dcd-4754-be9d-ec38f214db1b.png" alt="9c3a4fa6-3dcd-4754-be9d-ec38f214db1b" border="0"></a>
+        <!-- صورة القصة -->
+        <div class="story-image-container">
+            <img class="story-image" src="https://i.ibb.co/WW2zms8j/9c3a4fa6-3dcd-4754-be9d-ec38f214db1b.png" alt="صورة مغامرة الفراشة">
+        </div>
+
+        <!-- محتوى القصة -->
+        <div class="story-content">
             <p class="highlight">بَدَأَتْ فَرَاشَةٌ صَغِيرَةٌ رِحْلَةً لاِكْتِشَافِ الْعَالَمِ الْخَارِجِيِّ، وَوَاجَهَتْ كَثِيرًا مِنَ الْمُغَامَرَاتِ فِي طَرِيقِهَا. كَانَتِ الْفَرَاشَةُ ذَاتَ أَلْوَانٍ زَاهِيَةٍ تَشَعُّ بِالْحَيَاةِ، لَكِنَّهَا لَمْ تَكُنْ قَدْ غَادَرَتْ مَوْطِئَهَا الصَّغِيرَ بَيْنَ الزُّهُورِ الَّتِي نَشَأَتْ فِيهَا مُنْذُ وِلَادَتِهَا.</p>
             <h2>الفصل الأول</h2>
             <p>فِي الْيَوْمِ الأَوَّلِ مِنْ رِحْلَتِهَا، ارْتَفَعَتِ الْفَرَاشَةُ فَوْقَ الأَشْجَارِ الْكَبِيرَةِ وَشَاهَدَتْ لأَوَّلِ مَرَّةٍ مَدًى وَاسِعًا لِلسَّمَاءِ وَالْحُقُولِ الْخَضْرَاءِ الَّتِي تَمُدُّ إِلَى مَا لَا نِهَايَةَ لَهُ. شَعَرَتْ بِالْحَمَاسِ وَالْخَوْفِ مَعًا، لَكِنَّهَا قَرَّرَتْ أَنْ تَكُونَ شَجَاعَةً وَتَوَاصِلَ الطِّيَارَةَ بِحَثٍّ عَنِ الْمُغَامَرَةِ.</p>
@@ -135,6 +144,7 @@
             <p>حِينَمَا هَابَتْ عَلَى زَهْرَتِهَا الْقَدِيمَةِ، شَعَرَتْ بِالاِمْتِنَانِ لِمَا كَانَتْ عَلَيْهِ وَمَا أَصْبَحَتْ عَلَيْهِ الآنَ. وَكَانَتْ تَعْلَمُ أَنَّ الرِّحْلَةَ لَمْ تَنْتَهِ بَعْدُ، وَأَنَّهُ هُنَاكَ دَائِمًا مُغَامَرَاتٌ جَدِيدَةٌ تَنْتَظِرُهَا فِي الْمُسْتَقْبَلِ.</p>
             <p>وَهَكَذَا، تَعَلَّمَتِ الْفَرَاشَةُ أَنَّ الْحَيَاةَ مَلِئَةٌ بِالْمُفَاجَآتِ وَالتَّحَدِّيَاتِ، لَكِنْ مَعَ الشَّجَاعَةِ وَالْفِضُولِ، يُمْكِنُنَا جَمِيعًا أَنْ نَكْشِفَ جَمَالَ الْعَالَمِ الَّذِي نَعِيشُ فِيهِ.</p>
         </div>
+
         <!-- أزرار التفاعل -->
         <div class="interactive-buttons">
             <div class="icon-btn" onclick="playAudio('audio/story1.mp3')">
@@ -144,12 +154,7 @@
                 <i class="fas fa-bookmark"></i>
             </div>
         </div>
-        <audio id="smartRabbitAudio" src="audio/الأرنب_الذكي.mp3" preload="auto"></audio>
-        <audio id="newSmartRabbitAudio" src="audio/another_smart_rabbit.mp3" preload="auto"></audio>
-        <audio id="audio" src="audio/story1.mp3" preload="auto"></audio>
-        <audio id="anotherSmartRabbitAudio" src="audio/another_smart_rabbit.mp3" preload="auto"></audio>
     </div>
-
     <script>
         // تشغيل الصوت
         function playAudio(filename) {
@@ -157,17 +162,11 @@
             audio.src = filename;
             audio.play();
         }
-
         // إضافة القصة إلى المفضلة
         function bookmarkStory() {
             alert("تمت إضافة القصة إلى المفضلة!");
         }
-
-        // تشغيل صوت الأرنب الذكي
-        function playSmartRabbitAudio() {
-            var audio = document.getElementById('smartRabbitAudio');
-            audio.play();
-        }
     </script>
+    <audio id="smartRabbitAudio" src="audio/الأرنب_الذكي.mp3" preload="auto"></audio>
 </body>
 </html>

@@ -22,22 +22,27 @@
         body {
             background: var(--bg);
             min-height: 100vh;
-            padding: 2rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             text-align: center;
-            font-size: 1.8em; /* تكبير الخط */
+            font-size: 1.8rem;
         }
         .container {
             max-width: 800px;
-            margin: 0 auto;
+            width: 100%;
             background: white;
             border-radius: 20px;
             overflow: hidden;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            position: relative;
+            padding: 1rem;
         }
         .story-header {
             background: linear-gradient(135deg, var(--primary), var(--secondary));
             color: white;
             padding: 2rem;
+            border-bottom: 2px solid var(--accent);
         }
         .story-title {
             font-size: 2.5rem;
@@ -47,9 +52,15 @@
             font-size: 0.9rem;
             opacity: 0.9;
         }
+        .story-image-container {
+            margin: 2rem 0;
+            border-radius: 10px;
+            overflow: hidden;
+        }
         .story-image {
-            height: 300px;
-            background: url('https://via.placeholder.com/800x300?text=🚀+صورة+الفضاء') no-repeat center center/cover;
+            width: 100%;
+            height: auto;
+            object-fit: cover;
         }
         .story-content {
             padding: 2rem;
@@ -59,12 +70,13 @@
         .interactive-buttons {
             display: flex;
             justify-content: center;
-            gap: 1rem;
-            margin-top: 1rem;
+            gap: 1.5rem;
+            margin-top: 2rem;
+            margin-bottom: 1.5rem;
         }
         .icon-btn {
-            width: 50px;
-            height: 50px;
+            width: 60px;
+            height: 60px;
             border-radius: 50%;
             background: var(--accent);
             color: white;
@@ -73,10 +85,11 @@
             justify-content: center;
             cursor: pointer;
             transition: all 0.3s ease;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
         }
         .icon-btn:hover {
             transform: scale(1.1);
-            box-shadow: 0 4px 15px rgba(255,214,0,0.3);
+            box-shadow: 0 6px 15px rgba(255, 214, 0, 0.3);
         }
         /* تأثيرات خاصة */
         .container::before {
@@ -86,7 +99,7 @@
             left: -50%;
             width: 200%;
             height: 200%;
-            background: linear-gradient(45deg, transparent, rgba(255,255,255,0.2), transparent);
+            background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.2), transparent);
             transform: rotate(45deg);
             animation: magicGlow 3s infinite linear;
             opacity: 0.3;
@@ -95,23 +108,58 @@
             0% { transform: translateX(-100%) rotate(45deg); }
             100% { transform: translateX(100%) rotate(45deg); }
         }
+        .footer-actions {
+            padding: 1rem;
+            background: var(--primary);
+            color: white;
+            text-align: center;
+            border-radius: 10px;
+            margin-top: 2rem;
+        }
+        .footer-actions button {
+            background: var(--secondary);
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .footer-actions button:hover {
+            background: var(--accent);
+        }
+        .back-button {
+            position: absolute;
+            top: 1rem;
+            left: 1rem;
+            background: var(--primary);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .back-button:hover {
+            background: var(--accent);
+        }
     </style>
 </head>
 <body>
     <div class="container">
+        <a href="index.html" class="back-button">عودة</a>
         <!-- رأس القصة -->
-        <div class="story-header" style="margin-bottom: 20px;">
+        <div class="story-header">
             <h1 class="story-title">سفينة الفضاء</h1>
             <p class="age-group">العمر: 8-12 سنة</p>
         </div>
-       
-         
+        
         <!-- صورة القصة -->
-        <div class="story-image" style="background-image: none;"></div>
-      
+        <div class="story-image-container">
+            <img class="story-image" src="https://i.ibb.co/gLHW5szj/849a3f6a-9b1d-424d-8bb9-015492a717ce.png" alt="صورة سفينة الفضاء">
+        </div>
+        
         <!-- محتوى القصة -->
         <div class="story-content">
-            <a href="https://ibb.co/7d8pw72Y"><img src="https://i.ibb.co/gLHW5szj/849a3f6a-9b1d-424d-8bb9-015492a717ce.png" alt="849a3f6a-9b1d-424d-8bb9-015492a717ce" border="0"></a>
             <p>في عام 3023، انطلق ليام وزويا في مركبة فضائية متقدمة تُدعى "نجمة الأفق"، وهي مصممة خصيصًا لاكتشاف المجرات البعيدة التي لم يطأها البشر من قبل.</p>
             <p>كانا عالمين شابين يتمتعان بشغف لا محدود بالفضاء والمجهول، وحملت مهمتهما أمل البشرية في توسيع حدود المعرفة.</p>
             <p>بعد أسابيع من السفر عبر الفضاء العميق، وصل الفريق إلى مجرة غريبة مليئة بنجوم متلألئة بألوان غير مألوفة. كانت هذه المجرة مختلفة تمامًا عن أي شيء رأوه من قبل، حيث بدت النجوم وكأنها تتراقص في نغمات بنفسجية وأزرق زاهي، مما خلق لوحة سماوية ساحرة.</p>
@@ -124,7 +172,7 @@
             <p>استمرت الرحلة في أحداث مذهلة ومليئة بالمغامرات، حيث تعلما الكثير عن الكون وعن أنفسهما. وفي نهاية المطاف، أصبحا جزءًا من قصة كونية أكبر، حيث توحدت العقول والقوى المختلفة لحماية الحياة في جميع أنحائها.</p>
             <p>وهكذا، في أعماق الفضاء البعيد، بدأت حكاية ليام وزويا كجزء من إرث جديد للبشرية، إرث يحتفل بالتعاون بين مختلف الأشكال الحية في الكون.</p>
         </div>
-
+        
         <!-- أزرار التفاعل -->
         <div class="interactive-buttons">
             <div class="icon-btn" onclick="playAudio('audio/spaceAdventure.mp3')">
@@ -135,7 +183,6 @@
             </div>
         </div>
     </div>
-
     <script>
         // تشغيل الصوت
         function playAudio(filename) {
@@ -143,13 +190,11 @@
             audio.src = filename;
             audio.play();
         }
-
         // إضافة القصة إلى المفضلة
         function bookmarkStory() {
             alert("تمت إضافة القصة إلى المفضلة!");
         }
     </script>
-
     <!-- ملفات الصوت -->
     <audio id="spaceAdventureAudio" src="audio/spaceAdventure.mp3" preload="auto"></audio>
 </body>

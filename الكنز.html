@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>قصة الكنز الفقود</title>
+    <title>الكنز المفقود</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         :root {
@@ -22,22 +22,27 @@
         body {
             background: var(--bg);
             min-height: 100vh;
-            padding: 2rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             text-align: center;
-            font-size: 1.8em;
+            font-size: 1.8rem;
         }
         .container {
             max-width: 800px;
-            margin: 0 auto;
+            width: 100%;
             background: white;
             border-radius: 20px;
             overflow: hidden;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            position: relative;
+            padding: 1rem;
         }
         .story-header {
             background: linear-gradient(135deg, var(--primary), var(--secondary));
             color: white;
             padding: 2rem;
+            border-bottom: 2px solid var(--accent);
         }
         .story-title {
             font-size: 2.5rem;
@@ -47,41 +52,100 @@
             font-size: 0.9rem;
             opacity: 0.9;
         }
+        .story-image-container {
+            margin: 2rem 0;
+            border-radius: 10px;
+            overflow: hidden;
+        }
         .story-image {
-            height: 300px;
             width: 100%;
+            height: auto;
             object-fit: cover;
         }
-        .story-buttons {
+        .story-content {
             padding: 2rem;
-            text-align: center;
+            line-height: 1.8;
+            color: var(--text);
         }
-        .story-buttons button {
-            margin: 0.5rem;
-            padding: 0.5rem 1rem;
-            border: none;
-            border-radius: 10px;
-            background-color: var(--primary);
+        .interactive-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-top: 2rem;
+            margin-bottom: 1.5rem;
+        }
+        .icon-btn {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: var(--accent);
             color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
         }
-        .story-buttons button:hover {
-            background-color: var(--secondary);
+        .icon-btn:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 15px rgba(255, 214, 0, 0.3);
+        }
+        /* تأثيرات خاصة */
+        .container::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transform: rotate(45deg);
+            animation: magicGlow 3s infinite linear;
+            opacity: 0.3;
+        }
+        @keyframes magicGlow {
+            0% { transform: translateX(-100%) rotate(45deg); }
+            100% { transform: translateX(100%) rotate(45deg); }
+        }
+        .footer-actions {
+            padding: 1rem;
+            background: var(--primary);
+            color: white;
+            text-align: center;
+            border-radius: 10px;
+            margin-top: 2rem;
+        }
+        .footer-actions button {
+            background: var(--secondary);
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .footer-actions button:hover {
+            background: var(--accent);
         }
     </style>
 </head>
 <body>
     <div class="container">
+        <!-- رأس القصة -->
         <div class="story-header">
-            <h1 class="story-title">الكنز الفقود</h1>
+            <h1 class="story-title">الكنز الفقيد</h1>
             <p class="age-group">لجميع الأعمار</p>
         </div>
+        <!-- صورة القصة -->
+        <div class="story-image-container">
+            <img class="story-image" src="https://i.ibb.co/xqLdqPB8/7648a211-a58f-46ad-94ae-86eb46406b61.png" alt="صورة قصة الكنز الفقيد">
+        </div>
+        <!-- محتوى القصة -->
         <div class="story-content">
-            <a href="https://ibb.co/5h4whtSx">
-                <img src="https://i.ibb.co/xqLdqPB8/7648a211-a58f-46ad-94ae-86eb46406b61.png" alt="7648a211-a58f-46ad-94ae-86eb46406b61" border="0"></a>
-            <p>في أعماق المحيط، حيث تعيش الأسماك الملونة، اكتشف بطريق شجاع يدعى بوبو خريطة غامقة تؤدي إلى كنز أسطوري.</p>
+            <p>في أعماق المحيط، حيث تعيش الأسماك الملونة، اكتشف بطريق شجاع يدعى بوبو خريطة غامضة تؤدي إلى كنز أسطوري.</p>
             <p>في يوم من الأيام، وبينما كان بوبو يستكشف حطام سفينة قديمة، عثر على خريطة قديمة مرسومة بخطوط متعرجة ومكتوب عليها رموز غريبة. كانت الخريطة تشير إلى مكان بعيد جدًا في أعماق المحيط، حيث يُقال إن كنزاً أسطورياً مدفون هناك.</p>
-            <p>قرر بوبو أن يبدأ رحلته فوراً، لكنه لم يكن يعرف ماذا سيواجه. استعد بمساعدة صديقه السلمون الذكي، ريلي ، الذي كان يعرف الكثير عن أعماق المحيط وأسراره. بدآ الرحلة سباحة نحو الكهف المذكور في الخريطة.</p>
+            <p>قرر بوبو أن يبدأ رحلته فوراً، لكنه لم يكن يعرف ماذا سيواجه. استعد بمساعدة صديقه السلمون الذكي، ريلي، الذي كان يعرف الكثير عن أعماق المحيط وأسراره. بدآ الرحلة سباحة نحو الكهف المذكور في الخريطة.</p>
             <p>لكن طريقهما لم يكن سهلاً. واجها أول عقبة عندما مرّا بممر ضيق مليء بشباك قديمة تركها الصيادون. باستخدام ذكائه، استخدم بوبو قطعة حجر صغيرة لقطع الشباك والسماح لهما بالعبور بسلام.</p>
             <p>بعد ذلك، وصلا إلى منطقة مليئة بالشعاب المرجانية، لكنها كانت موطنًا لأسماك قرش ضخمة. هنا، استخدم ريلي معرفته ليقودهما عبر طريق آمن بين المرجان، مما جعل القرش يفقد أثرهما.</p>
             <p>أخيرًا، وصلا إلى الكهف المذكور في الخريطة. داخل الكهف، وجدوا صندوقًا كبيرًا محكم الإغلاق ومكتوب عليه رسالة تقول: "ليس الذهب أو الجوهر هو الكنز الحقيقي، بل الحكمة والمعرفة."</p>
@@ -89,34 +153,29 @@
             <p>الختام:</p>
             <p>عاد بوبو وريلي إلى منزلهما، وشاركا كل ما تعلمياه مع أصدقائهما في المحيط. أصبحت قصتهما مثالاً على أهمية البحث عن المعرفة والحكمة، وأن المغامرات الحقيقية تجعلنا نتعلم وننمو.</p>
             <p>العبرة: الكنز الحقيقي هو المعرفة التي تساعدنا على فهم العالم من حولنا وتجعلنا أفضل.</p>
-            <button onclick="window.location.href='المملكة السحرية.html'">اقرأ المزيد</button>
         </div>
-        <div class="story-buttons">
-            <button onclick="playAudio('audio/الكنز_الفقود.mp3')"><i class="fas fa-play"></i> تشغيل الصوت</button>
-            <button onclick="bookmarkStory()"><i class="fas fa-bookmark"></i> إضافة إلى المفضلة</button>
-            <button onclick="playSmartRabbitAudio()"><i class="fas fa-volume-up"></i> تشغيل صوت الكنز الفقود</button>
+        <!-- زري الصوت وإضافة إلى المفضلة -->
+        <div class="interactive-buttons">
+            <div class="icon-btn" onclick="playAudio()">
+                <i class="fas fa-volume-up"></i>
+            </div>
+            <div class="icon-btn" onclick="bookmarkStory()">
+                <i class="fas fa-bookmark"></i>
+            </div>
         </div>
-    </div>
+      
+    <!-- ملفات الصوت -->
+    <audio id="smartRabbitAudio" src="audio/الأرنب_الذكي.mp3" preload="auto"></audio>
     <script>
         // تشغيل الصوت
-        function playAudio(filename) {
-            var audio = document.getElementById('audio');
-            audio.src = filename;
+        function playAudio() {
+            const audio = document.getElementById('smartRabbitAudio');
             audio.play();
         }
-
         // إضافة القصة إلى المفضلة
         function bookmarkStory() {
             alert("تمت إضافة القصة إلى المفضلة!");
         }
-
-        // تشغيل صوت الكنز الفقود
-        function playSmartRabbitAudio() {
-            var audio = document.getElementById('newSmartRabbitAudio');
-            audio.play();
-        }
     </script>
 </body>
-
-    
 </html>
